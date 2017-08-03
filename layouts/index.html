@@ -2,9 +2,6 @@
   {{ .Site.Title }}
 {{- end }}
 {{ define "main" }}
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
   {{ range .Data.Pages }}
     <article>
       <h2>

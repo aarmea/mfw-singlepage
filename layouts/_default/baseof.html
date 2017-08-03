@@ -6,8 +6,12 @@
     <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
   </head>
   <body>
-    <header>{{ block "header" . }}{{ end }}</header>
+    <header>
+      <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+    </header>
     <main>{{ block "main" . }}{{ end }}</main>
-    <footer>{{ block "footer" . }}{{ end }}</footer>
+    <footer>
+      <!-- TODO -->
+    </footer>
   </body>
 </html>
