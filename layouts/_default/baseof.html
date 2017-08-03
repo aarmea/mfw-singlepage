@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ .Hugo.Generator }}
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  </head>
+  <body>
+    <header>{{ block "header" . }}{{ end }}</header>
+    <main>{{ block "main" . }}{{ end }}</main>
+    <footer>{{ block "footer" . }}{{ end }}</footer>
+  </body>
+</html>
