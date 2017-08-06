@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on This Is A Website</title>
-    <link>http://example.org/posts/</link>
+    <link>http://aarmea.github.io/mfw-singlepage/posts/</link>
     <description>Recent content in Posts on This Is A Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Aug 2017 22:57:47 -0700</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://aarmea.github.io/mfw-singlepage/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Markdown</title>
-      <link>http://example.org/posts/markdown/</link>
+      <link>http://aarmea.github.io/mfw-singlepage/posts/markdown/</link>
       <pubDate>Tue, 01 Aug 2017 22:57:47 -0700</pubDate>
       
-      <guid>http://example.org/posts/markdown/</guid>
+      <guid>http://aarmea.github.io/mfw-singlepage/posts/markdown/</guid>
       <description>Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
 Thus, &amp;ldquo;Markdown&amp;rdquo; is two things: (1) a plain text formatting syntax; and (2) a software tool, written in Perl, that converts the plain text formatting to HTML. See the Syntax page for details pertaining to Markdown&amp;rsquo;s formatting syntax. You can try it out, right now, using the online Dingus.</description>
     </item>
     
     <item>
       <title>Online Video</title>
-      <link>http://example.org/posts/video/</link>
+      <link>http://aarmea.github.io/mfw-singlepage/posts/video/</link>
       <pubDate>Tue, 01 Aug 2017 22:51:53 -0700</pubDate>
       
-      <guid>http://example.org/posts/video/</guid>
+      <guid>http://aarmea.github.io/mfw-singlepage/posts/video/</guid>
       <description>Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.</description>
     </item>
     
     <item>
       <title>Lorem Ipsum</title>
-      <link>http://example.org/posts/lorem/</link>
+      <link>http://aarmea.github.io/mfw-singlepage/posts/lorem/</link>
       <pubDate>Tue, 01 Aug 2017 22:49:18 -0700</pubDate>
       
-      <guid>http://example.org/posts/lorem/</guid>
+      <guid>http://aarmea.github.io/mfw-singlepage/posts/lorem/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     

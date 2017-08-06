@@ -3,38 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/posts/markdown/</loc>
+    <loc>http://aarmea.github.io/mfw-singlepage/posts/markdown/</loc>
     <lastmod>2017-08-01T22:57:47-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/video/</loc>
+    <loc>http://aarmea.github.io/mfw-singlepage/posts/video/</loc>
     <lastmod>2017-08-01T22:51:53-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/posts/lorem/</loc>
+    <loc>http://aarmea.github.io/mfw-singlepage/posts/lorem/</loc>
     <lastmod>2017-08-01T22:49:18-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://aarmea.github.io/mfw-singlepage/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/posts/</loc>
+    <loc>http://aarmea.github.io/mfw-singlepage/posts/</loc>
     <lastmod>2017-08-01T22:57:47-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://aarmea.github.io/mfw-singlepage/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://aarmea.github.io/mfw-singlepage/</loc>
     <lastmod>2017-08-01T22:57:47-07:00</lastmod>
     <priority>0</priority>
   </url>
