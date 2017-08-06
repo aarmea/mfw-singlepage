@@ -6,43 +6,57 @@
     <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <script>
 // TODO: 'use strict'
+function loadPage(newUrl) {
+  var httpRequest = new XMLHttpRequest();
+  httpRequest.onreadystatechange = function() {
+    if (httpRequest.readyState !== XMLHttpRequest.DONE)
+      return;
+
+    // TODO: UI for this error
+    var newDocument = httpRequest.responseXML;
+    if (newDocument === null)
+      return;
+
+    // TODO: UI for this error
+    var newContent = httpRequest.responseXML.getElementById("mainContent");
+    if (newContent === null)
+      return;
+
+    document.title = newDocument.title;
+
+    var contentElement = document.getElementById("mainContent");
+    contentElement.replaceWith(newContent);
+  }
+
+  httpRequest.responseType = "document";
+  httpRequest.open("GET", newUrl);
+  httpRequest.send();
+};
+
 window.onload = function() {
+  // Make links load asynchronously
   document.querySelector("body").addEventListener("click", function(event) {
     if (event.target.tagName !== "A")
       return;
 
-    // TODO: window.location.origin's support isn't as wide as the history API
-    var href = event.target.href;
+    // History API needed to make sure back and forward still work
+    if (history === null)
+      return;
+
+    // Async load is only safe on internal links
+    var newUrl = event.target.href;
     var domain = window.location.origin;
-    if (typeof domain !== "string" || href.search(domain) !== 0)
+    if (typeof domain !== "string" || newUrl.search(domain) !== 0)
       return;
 
     event.preventDefault();
-
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState !== XMLHttpRequest.DONE)
-        return;
-
-      // TODO: UI for this error
-      if (httpRequest.responseXML === null)
-        return;
-
-      // TODO: UI for this error
-      var newContent = httpRequest.responseXML.getElementById("mainContent");
-      if (newContent === null)
-        return;
-
-      var contentElement = document.getElementById("mainContent");
-      contentElement.replaceWith(newContent);
-
-      // TODO: Change the address bar and edit history with the history API
-    }
-
-    httpRequest.responseType = "document";
-    httpRequest.open("GET", href);
-    httpRequest.send();
+    loadPage(newUrl);
+    history.pushState(null /*stateObj*/, "" /*title*/, newUrl);
   });
+}
+
+window.onpopstate = function(event) {
+  loadPage(window.location);
 }
     </script>
   </head>
