@@ -4,12 +4,53 @@
     {{ .Hugo.Generator }}
     <meta charset="utf-8">
     <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <script>
+// TODO: 'use strict'
+window.onload = function() {
+  document.querySelector("body").addEventListener("click", function(event) {
+    if (event.target.tagName !== "A")
+      return;
+
+    // TODO: window.location.origin's support isn't as wide as the history API
+    var href = event.target.href;
+    var domain = window.location.origin;
+    if (typeof domain !== "string" || href.search(domain) !== 0)
+      return;
+
+    event.preventDefault();
+
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function() {
+      if (httpRequest.readyState !== XMLHttpRequest.DONE)
+        return;
+
+      // TODO: UI for this error
+      if (httpRequest.responseXML === null)
+        return;
+
+      // TODO: UI for this error
+      var newContent = httpRequest.responseXML.getElementById("mainContent");
+      if (newContent === null)
+        return;
+
+      var contentElement = document.getElementById("mainContent");
+      contentElement.replaceWith(newContent);
+
+      // TODO: Change the address bar and edit history with the history API
+    }
+
+    httpRequest.responseType = "document";
+    httpRequest.open("GET", href);
+    httpRequest.send();
+  });
+}
+    </script>
   </head>
   <body>
     <header>
       <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
     </header>
-    <main>{{ block "main" . }}{{ end }}</main>
+    <main id="mainContent">{{ block "main" . }}{{ end }}</main>
     <footer>
       <!-- TODO -->
     </footer>
