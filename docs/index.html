@@ -46,12 +46,14 @@ window.onload = function() {
     
     var newUrl = event.target.href;
     var domain = window.location.origin;
-    if (typeof domain !== "string" || newUrl.search(domain) !== 0)
-      return;
-
-    event.preventDefault();
-    loadPage(newUrl);
-    history.pushState(null  , ""  , newUrl);
+    if (typeof domain !== "string" || newUrl.search(domain) !== 0) {
+      event.preventDefault();
+      window.open(newUrl, "_blank");
+    } else {
+      event.preventDefault();
+      loadPage(newUrl);
+      history.pushState(null  , ""  , newUrl);
+    }
   });
 }
 
